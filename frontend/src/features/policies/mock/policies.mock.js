@@ -1,0 +1,81 @@
+import { POLICY_STATUS, POLICY_TYPE } from '../constants/policy.constants';
+
+export const MOCK_POLICIES = [
+  {
+    id: 'POL-001',
+    name: 'Standard Student Protection 2025',
+    code: 'POL-STD-25',
+    type: POLICY_TYPE.ACCIDENTAL_MEDICAL,
+    insurer: 'National Insurance Co.',
+    premiumAmount: 500,
+    claimThreshold: 5000,
+    policyYear: '2025-2026',
+    startDate: '2025-04-01',
+    endDate: '2026-03-31',
+    applicableClasses: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th', '11th', '12th'],
+    status: POLICY_STATUS.ACTIVE,
+    coverageSummary: 'Comprehensive accidental medical coverage including hospitalization and emergency care. Payouts are made directly to hospitals.',
+    hospitalBillOnly: true,
+    maturityBenefit: false,
+    accidentOnly: true,
+    enrollmentsCount: 1250,
+    claimsCount: 45,
+    createdDate: '2025-01-15',
+    notes: 'Primary policy for the current academic year.'
+  },
+  {
+    id: 'POL-002',
+    name: 'Student Health Support Plan',
+    code: 'POL-HLT-24',
+    type: POLICY_TYPE.HEALTH_SUPPORT,
+    insurer: 'Reliable Health Ltd.',
+    premiumAmount: 1200,
+    claimThreshold: 2000,
+    policyYear: '2024-2025',
+    startDate: '2024-04-01',
+    endDate: '2025-03-31',
+    applicableClasses: ['9th', '10th', '11th', '12th'],
+    status: POLICY_STATUS.EXPIRED,
+    coverageSummary: 'General health support including outpatient consultations and diagnostic tests for senior students.',
+    hospitalBillOnly: false,
+    maturityBenefit: false,
+    accidentOnly: false,
+    enrollmentsCount: 850,
+    claimsCount: 120,
+    createdDate: '2024-02-10',
+    notes: 'Expired policy from previous year.'
+  },
+  {
+    id: 'POL-003',
+    name: 'Future Safety Initiative 2026',
+    code: 'POL-FSI-26',
+    type: POLICY_TYPE.STUDENT_ACCIDENT,
+    insurer: 'National Insurance Co.',
+    premiumAmount: 550,
+    claimThreshold: 5000,
+    policyYear: '2026-2027',
+    startDate: '2026-04-01',
+    endDate: '2027-03-31',
+    applicableClasses: ['Nursery', 'LKG', 'UKG', '1st', '2nd', '3rd', '4th', '5th'],
+    status: POLICY_STATUS.DRAFT,
+    coverageSummary: 'Early childhood safety plan with enhanced emergency response features.',
+    hospitalBillOnly: true,
+    maturityBenefit: false,
+    accidentOnly: true,
+    enrollmentsCount: 0,
+    claimsCount: 0,
+    createdDate: '2025-04-20',
+    notes: 'Configuration in progress for next year.'
+  }
+];
+
+export const MOCK_POLICY_SUMMARY = {
+  totalPolicies: 12,
+  activePolicies: 4,
+  draftPolicies: 2,
+  inactivePolicies: 1,
+  currentPolicyYear: '2025-2026',
+  totalEnrollmentsLinked: 5420,
+  claimsLinked: 312,
+  policiesExpiringSoon: 1
+};
